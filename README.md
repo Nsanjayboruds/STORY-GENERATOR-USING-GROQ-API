@@ -26,4 +26,27 @@ An AI-powered story generator built using **React (frontend)** and **Groq API (b
 
 ---
 
-## 📂 Project Structure
+GROQ_API_KEY=your-groq-api-key
+HUGGINGFACE_TOKEN=your-hugging-face-token
+
+
+---
+
+## 🚀 Running the Project
+
+### 1️⃣ Install dependencies:
+```bash
+cd backend
+npm install
+
+cd frontend
+npm install
+2️⃣ Run Backend:
+
+cd backend
+node index.js
+
+3️⃣ Run Frontend:
+
+cd frontend
+npm run dev
