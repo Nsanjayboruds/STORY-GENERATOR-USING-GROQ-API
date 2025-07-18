@@ -1,0 +1,16 @@
+# Node.js
+node_modules/
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+.DS_Store
+
+# Logs
+logs
+*.log
+
+# System
+Thumbs.db
