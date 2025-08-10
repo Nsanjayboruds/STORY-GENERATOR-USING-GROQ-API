@@ -38,7 +38,6 @@ export const AuthProvider = ({ children }) => {
     }
   }, []);
 
-  // Sync across tabs
   useEffect(() => {
     const handleStorageChange = (e) => {
       if (e.key === "token") {
