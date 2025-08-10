@@ -14,7 +14,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-gray-800 shadow-md px-6 py-4 flex justify-between items-center">
       {/* Logo / Brand */}
       <Link to="/" className="text-xl font-bold text-blue-500 hover:text-blue-300">
-        🧠 STORY-GENERATER
+         STORY-GENERATER
       </Link>
 
       {/* Navigation / Actions */}

@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import axios from 'axios';
+import SplitText from "../components/SplitText";
+import DarkVeil from './DarkVeil';
+
 
 export default function StoryGenerator() {
   const [prompt, setPrompt] = useState('');
@@ -12,6 +15,13 @@ export default function StoryGenerator() {
   const [imageLoading, setImageLoading] = useState(false);
   const [characterImageUrl, setCharacterImageUrl] = useState('');
   const [characterLoading, setCharacterLoading] = useState(false);
+
+
+  const handleAnimationComplete = () => {
+
+  console.log('All letters have animated!');
+
+};
 
   const extractCharacterPrompt = (storyText) => {
     const match = storyText.match(/(?:named\s)?([A-Z][a-z]+\s[A-Z][a-z]+|[A-Z][a-z]+)/);
@@ -91,8 +101,40 @@ export default function StoryGenerator() {
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-6 bg-[#0f172a] text-white min-h-screen">
-      <h1 className="text-4xl font-bold text-center mb-8 text-blue-400">✨ AI Story Generator (Llama 3)</h1>
+
+     
+     <div className="max-w-3xl mx-auto p-6 bg-[#0f172a] text-white min-h-screen">
+    
+  
+
+      <SplitText
+
+  text="✨ AI Story Generator (Llama 3)"
+
+  className="text-4xl font-semibold text-center"
+
+  delay={100}
+
+  duration={0.6}
+
+  ease="power3.out"
+
+  splitType="chars"
+
+  from={{ opacity: 0, y: 40 }}
+
+  to={{ opacity: 1, y: 0 }}
+
+  threshold={0.1}
+
+  rootMargin="-100px"
+
+  textAlign="center"
+
+  onLetterAnimationComplete={handleAnimationComplete}
+
+/>
+      {/* <h1 className="text-4xl font-bold text-center mb-8 text-blue-400">✨ AI Story Generator (Llama 3)</h1> */}
 
       <div className="mb-6">
         <label className="block text-sm font-medium text-gray-300 mb-2">AI Model:</label>
@@ -166,5 +208,9 @@ export default function StoryGenerator() {
         </div>
       )}
     </div>
+    
   );
+
+
+
 }
