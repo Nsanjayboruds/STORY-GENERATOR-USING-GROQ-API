@@ -60,8 +60,8 @@ function App() {
               </ProtectedRoute>
             }
           />
-          <Route path="/404" element={<h2 className="text-center mt-10 text-xl">404 - Page Not Found</h2>} />
-          <Route path="*" element={<Navigate to="/404" replace />} />
+          {/* <Route path="/404" element={<h2 className="text-center mt-10 text-xl">404 - Page Not Found</h2>} /> */}
+          <Route path="*" element={<Navigate to="/story" replace />} />
         </Routes>
       </div>
     </AuthProvider>
