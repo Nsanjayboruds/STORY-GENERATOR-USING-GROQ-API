@@ -43,7 +43,7 @@ const Signup = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:5000/api/signup", {
+      const response = await axios.post("https://story-generator-using-groq-api.onrender.com/signup", {
         email: formData.email,
         password: formData.password
       });
