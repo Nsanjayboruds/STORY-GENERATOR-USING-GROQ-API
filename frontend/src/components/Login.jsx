@@ -28,7 +28,7 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const res = await axios.post("http://localhost:5000/api/login", formData);
+      const res = await axios.post("https://story-generator-using-groq-api.onrender.com/login", formData);
 
       if (res.data.token) {
         login(res.data.token);
