@@ -18,7 +18,7 @@ const app = express();
 
 // ✅ Middleware
 app.use(cors({
-  origin: "http://localhost:5173", // frontend URL
+  origin: "https://story-generator-using-groq-api-yral.vercel.app/", // frontend URL
   credentials: true
 }));
 app.use(express.json()); // ✅ Required to parse JSON body
