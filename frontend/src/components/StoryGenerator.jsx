@@ -31,7 +31,7 @@ export default function StoryGenerator() {
   const generateImage = async (storyText) => {
     setImageLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/api/image", {
+      const res = await axios.post("https://story-generator-using-groq-api.onrender.com/image", {
         prompt: `illustration of: ${storyText.slice(0, 300)}`
       });
       setImageUrl(res.data.image || res.data.imageUrl);
@@ -47,7 +47,7 @@ export default function StoryGenerator() {
     setCharacterLoading(true);
     const characterPrompt = extractCharacterPrompt(storyText);
     try {
-      const res = await axios.post("http://localhost:5000/api/image", {
+      const res = await axios.post("https://story-generator-using-groq-api.onrender.com/image", {
         prompt: characterPrompt
       });
       setCharacterImageUrl(res.data.image || res.data.imageUrl);
@@ -73,7 +73,7 @@ export default function StoryGenerator() {
     setCopied(false);
 
     try {
-      const response = await axios.post("http://localhost:5000/api/ai", { prompt, model });
+      const response = await axios.post("https://story-generator-using-groq-api.onrender.com/", { prompt, model });
       if (response.data?.response) {
         const storyText = response.data.response;
         setStory(storyText);
